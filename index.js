@@ -3,7 +3,7 @@ const $ = (selector) => document.querySelector(selector);
 const menuEmail = $('.navbar-email');
 const desktopMenu = $('.desktop-menu');
 const menuCarIcon = $('.navbar-shopping-cart');
-const aside = $('.product-detail');
+const shoppingCartContainer = $('#shoppingCartContainer');
 const burgerMenu = $('.menu');
 const mobileMenu = $('.mobile-menu');
 const cardsContainer = $('.cards-container')
@@ -18,20 +18,20 @@ menuCarIcon.addEventListener('click', toggleCarAside);
 
 function toggleDesktopMenu() {
   mobileMenu.classList.add('inactive');
-  aside.classList.add('inactive');
+  shoppingCartContainer.classList.add('inactive');
   desktopMenu.classList.toggle('inactive');
 }
 
 function toggleMobileMenu() {
   desktopMenu.classList.add('inactive');
-  aside.classList.add('inactive');
+  shoppingCartContainer.classList.add('inactive');
   mobileMenu.classList.toggle('inactive');
 }
 
 function toggleCarAside() {
   desktopMenu.classList.add('inactive');
   mobileMenu.classList.add('inactive');
-  aside.classList.toggle('inactive');
+  shoppingCartContainer.classList.toggle('inactive');
 }
 
 
